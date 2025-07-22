@@ -10,6 +10,7 @@ let calculation = () => {
 
 calculation();
 
+// Generate cart items
 let generateCartItems = () => {
   if (basket.length !== 0) {
     return (shoppingCart.innerHTML = basket
@@ -54,6 +55,7 @@ let generateCartItems = () => {
 
 generateCartItems();
 
+// For increment
 let increment = (id) => {
   let selectedItem = id;
   let search = basket.find((x) => x.id === selectedItem.id);
@@ -71,6 +73,7 @@ let increment = (id) => {
   localStorage.setItem("data", JSON.stringify(basket));
 };
 
+// For decrement
 let decrement = (id) => {
   let selectedItem = id;
   let search = basket.find((x) => x.id === selectedItem.id);
@@ -110,6 +113,7 @@ let clearCart = () => {
   localStorage.setItem("data", JSON.stringify(basket));
 };
 
+// For Total Amount
 let TotalAmount = () => {
   if (basket.length !== 0) {
     let amount = basket
